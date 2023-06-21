@@ -1,0 +1,33 @@
+{
+  "name": "dev-forum",
+  "version": "1.0.0",
+  "description": "Dev-forum is an online platform for software developers",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start:web": "yarn workspace dev-forum-client start",
+    "start:server": "yarn workspace dev-forum-server dev",
+    "build:web": "yarn workspace dev-forum-client build",
+    "build:server": "yarn workspace dev-forum-server build",
+    "build:all": "yarn workspace dev-forum-client build && yarn workspace dev-forum-server build",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|jsx|tsx|json)\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifulshihab/dev-forum.git"
+  },
+  "author": "saiful islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saifulshihab/dev-forum/issues"
+  },
+  "homepage": "https://github.com/saifulshihab/dev-forum#readme",
+  "workspaces": [
+    "packages/**"
+  ]
+}
