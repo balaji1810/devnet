@@ -1,7 +1,7 @@
 {
   "name": "dev-forum",
   "version": "1.0.0",
-  "description": "Dev-forum is an online platform for software developers",
+  "description": "DevNet is an online platform for software developers",
   "main": "index.js",
   "type": "module",
   "private": true,
@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saifulshihab/dev-forum.git"
+    "url": "git+https://github.com/balaji1810/devnet.git"
   },
-  "author": "saiful islam",
+  "author": "Team 17",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saifulshihab/dev-forum/issues"
+    "url": "https://github.com/balaji1810/devnet/issues"
   },
-  "homepage": "https://github.com/saifulshihab/dev-forum#readme",
+  "homepage": "https://github.com/balaji1810/devnet#readme",
   "workspaces": [
     "packages/**"
   ]
