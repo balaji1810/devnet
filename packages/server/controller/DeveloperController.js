@@ -523,12 +523,12 @@ const getResetPasswordLinkDev = asyncHandler(async (req, res) => {
     });
 
     // const url = `http://localhost:3000/createNewPassword/${token}`;    //localhost
-    const url = `${process.env.PROD_CLIENT}/recover-password/${token}`;
+    const url = `$http://localhost:3000/recover-password/${token}`;
 
     const emailSent = await transporter.sendMail({
       from: process.env.EMAIL,
       to: email,
-      subject: "Reset Password | DevForum",
+      subject: "Reset Password | DevNet",
       text: "Reset your password",
       html: `<p>Please click this link to reset password. <a href="${url}">${url}</a></p>`,
     });
