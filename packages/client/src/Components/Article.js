@@ -44,6 +44,8 @@ const Article = ({ article, routeFromProfile, details }) => {
     dispatch(shareArticle(articleId, caption));
   };
 
+  // console.log(article.description);
+
   return (
     <>
       <div className="w-full bg-white dark:bg-gray-800 rounded shadow my-2 px-5 py-2">
@@ -140,14 +142,15 @@ const Article = ({ article, routeFromProfile, details }) => {
             } overflow-ellipsis ${!showMore && "overflow-hidden"}`}
           >
             <div className="text-gray-600 text-justify dark:text-gray-400 overflow-hidden">
-              {article?.description}
+              {/* {article?.description} */}
+              <div dangerouslySetInnerHTML={{ __html:  article?.description}} />
             </div>
           </div>
         ) : (
           <>
             <div className={`mt-3 h-full max-h-50 overflow-ellipsis`}>
               <div className="text-gray-600 text-justify dark:text-gray-400 overflow-hidden">
-                {article?.description}
+                article?.description
               </div>
             </div>
             <div className={`flex mt-2 items-center text-xs`}>

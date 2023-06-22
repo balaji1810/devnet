@@ -523,7 +523,7 @@ const getResetPasswordLinkDev = asyncHandler(async (req, res) => {
     });
 
     // const url = `http://localhost:3000/createNewPassword/${token}`;    //localhost
-    const url = `$http://localhost:3000/recover-password/${token}`;
+    const url = `http://localhost:3000/recover-password/${token}`;
 
     const emailSent = await transporter.sendMail({
       from: process.env.EMAIL,

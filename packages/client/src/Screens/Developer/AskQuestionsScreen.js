@@ -9,7 +9,6 @@ import ArticleContainer from "../../Container/ArticleContainer";
 const AskQuestionsScreen = ({ location }) => {
   const { path, url } = useRouteMatch();
   const currentPath = location.pathname.split("/")[3];
-console.log("ask")
   return (
     <div className="grid grid-cols-4 h-full">
       <div className="col-span-4 sm:col-span-4 md:col-span-3">

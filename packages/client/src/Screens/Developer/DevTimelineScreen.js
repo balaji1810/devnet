@@ -11,20 +11,23 @@ import {
 
 const DevTimelineScreen = ({ user, recruiterView }) => {
   const dispatch = useDispatch();
-
+  // console.log(user._id);
   const sharedArticleGet = useSelector((state) => state.sharedArticleGet);
-  const { loading, articles, error } = sharedArticleGet;
+  
 
   const signInDev = useSelector((state) => state.signInDev);
   const { devInfo: currentUser } = signInDev;
 
   useEffect(() => {
+    // console.log(user._id);
     dispatch(getSharedArticle(user?._id, recruiterView));
   }, [dispatch, user?._id, recruiterView]);
 
   const deleteShareArticleHandler = (articleId) => {
     dispatch(deleteSharedArticle(articleId));
   };
+
+  const { loading, articles, error } = sharedArticleGet;
 
   return (
     <div>

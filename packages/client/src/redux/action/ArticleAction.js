@@ -461,15 +461,16 @@ export const shareArticle =
 // get Shared articles
 export const getSharedArticle =
   (userId, recruiterView) => async (dispatch, getState) => {
+    // console.log(userId);
     try {
       dispatch({
         type: GET_SHARED_ARTICLE_REQUEST,
       });
+      // console.log(userId);
       const {
         signInDev: { devInfo },
         signInRec: { recInfo },
       } = getState();
-
       const config = {
         headers: {
           Authorization: `Bearer ${
@@ -477,12 +478,14 @@ export const getSharedArticle =
           }`,
         },
       };
+      // wait(3000)
+      // while (!userId) {
+      //   console.log(userId);
+      // }
       const { data } = await privateApiRequest.get(
-        `${
-          recruiterView
-            ? `/api/article/getSharedArticle/${userId}/recruiterView`
-            : `/api/article/getSharedArticle/${userId}`
-        }`,
+        recruiterView ? 
+        `/api/article/getSharedArticle/${userId}/recruiterView` : `/api/article/getSharedArticle/${userId}`
+        ,
         config
       );
       dispatch({
