@@ -130,7 +130,7 @@ const JobCircular = ({ circular, noRoute, recruiter, details, developer }) => {
           <span className="ml-1 text-green-500">
             {circular?.negotiable
               ? " Negotiable"
-              : `${circular?.salaryFrom}K-${circular?.salaryTo}K (BDT/Monthly)`}
+              : `${circular?.salaryFrom}K-${circular?.salaryTo}K (INR/Monthly)`}
           </span>
         </p>
       </div>

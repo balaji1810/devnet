@@ -10,7 +10,7 @@ import Loader from "../../Components/Loader";
 import { useLocalStorage } from "../../useLocalStorage";
 
 const recId = JSON.parse(localStorage?.getItem("recInfo"))?._id;
-console.log(recId);
+// console.log(recId);
 
 const ChatScreen = ({ recruiter }) => {
   const dispatch = useDispatch();

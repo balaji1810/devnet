@@ -26,7 +26,7 @@ import Welcome from "./Screens/Welcome";
 export const socket = io(baseURL);
 
 function App() {
-  console.log("App");
+  // console.log("App");
   return (
     <Provider store={store}>
       <Router>

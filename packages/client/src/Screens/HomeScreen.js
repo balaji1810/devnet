@@ -18,7 +18,7 @@ const HomeScreen = ({ location }) => {
   const { path, url } = useRouteMatch();
 
   const pathName = location.pathname.split("/")[2];
-  console.log("home");
+  // console.log("home");
 
   // const { setNewNotification } = useNewNotification();
 
